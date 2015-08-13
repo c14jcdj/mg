@@ -1,0 +1,22 @@
+{
+  "name": "my-guy",
+  "version": "1.0",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "Chermaine Zimmerman"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
