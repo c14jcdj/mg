@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 	<title>My Guy</title>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -13,5 +13,43 @@
 			<h1>Hello Walt</h1>
 		</div>
 	</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Guy</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script>
+    
+  </script>
+  <script type="text/html" id="home">
+    <h1>Router FTW!</h1>
+  </script>
+  <script type="text/html" id="template1">
+    <h1>Page 1: <%= greeting %></h1>
+    <p><%= moreText %></p>
+  </script>
+  <script type="text/html" id="template2">
+    <h1>Page 2: <%= heading %></h1>
+    <p>Lorem ipsum...</p>
+  </script>
+</head>
+<body>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#/page1">Page 1</a></li>
+    <li><a href="#/page2">Page 2</a></li>
+  </ul>
+  <div id="view"></div>
+  <script>
+    
+  </script>
 </body>
 </html>
