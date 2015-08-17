@@ -15,7 +15,7 @@
   
 </head>
 <body>
-	<script type="text/html" id="home">
+	<script type="text/html" id="schedule">
 		<div class="banner">
 			<h1>MYGUY</h1>
 			<h5><span class="glyphicon glyphicon-star" aria-hidden="true"></span>FOOTBALL<span class="glyphicon glyphicon-star" aria-hidden="true"></span></h5>
@@ -24,14 +24,19 @@
 		<div></div>
 
   	</script>
-	<script type="text/html" id="template1">
-	<h1>Page 1: <%= greeting %></h1>
-	<p><%= moreText %></p>
+	<script type="text/html" id="my-game">
+	<h1>My Game: 
 	</script>
-	<script type="text/html" id="template2">
-	<h1>Page 2: <%= heading %></h1>
-	<p>Lorem ipsum...</p>
+	<script type="text/html" id="plays">
+	<h1>Play: 
 	</script>
+	<script type="text/html" id="leaderboard">
+	<h1>LeaderBoard: 
+	</script>
+	<script type="text/html" id="help">
+	<h1>Help: 
+	</script>
+	
 	<!-- BEGIN: Underscore Template Definition. -->
 	<script type="text/template" class="template">
 	   <h2>
@@ -66,11 +71,11 @@
 		  <div id="view"></div>
 		  <div id="layout">
 			   	<ul>
-				    <li><a href="#/page1"><span class="glyphicon glyphicon-list-alt"></span><p>Schedule</p></a></li>
-				    <li><a href="#"><span class="glyphicon">MG</span><p>MyGame</p></a></li>
-				    <li><a href="#/page2"><span class="glyphicon glyphicon-fullscreen"></span><p>Plays</p></a></li>
-				    <li><a href="#/page2"><span class="glyphicon glyphicon-user"></span><p>Leader</p></a></li>
-				    <li class="chewy"><a href="#/page2"><span class="glyphicon glyphicon-info-sign"></span><p>Help</p></a></li>
+				    <a href="#"><li><span class="glyphicon glyphicon-list-alt"></span><p>Schedule</p></li></a>
+				    <a href="#/my-game"><li><span class="glyphicon">MG</span><p>MyGame</p></li></a>
+				    <a href="#/plays"><li><span class="glyphicon glyphicon-fullscreen"></span><p>Plays</p></li></a>
+				    <a href="#/leaderboard"><li><span class="glyphicon glyphicon-user"></span><p>Leader</p></li></a>
+				    <a href="#/help"><li class="chewy"><span class="glyphicon glyphicon-info-sign"></span><p>Help</p></li></a>
 	  			</ul>
   			</div>
 		</div>

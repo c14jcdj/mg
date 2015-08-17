@@ -37,9 +37,12 @@ $(function(){
 
 	//Set Routes
 
-	routerModule.route('/', 'home');
-  routerModule.route('/page1', 'template1');
-  routerModule.route('/page2', 'template2');
+	routerModule.route('/', 'schedule');
+  routerModule.route('/my-game', 'my-game');
+  routerModule.route('/plays', 'plays');
+  routerModule.route('/leaderboard', 'leaderboard');
+  routerModule.route('/help', 'help');
+  
 })
 
 
