@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>My Guy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/routers.js"></script>
-  <script type="text/html" id="home">
-    <div class="chewy">
-    	<h1>MYGUY</h1>
-    	<h5><span class="glyphicon glyphicon-star" aria-hidden="true"></span>FOOTBALL<span class="glyphicon glyphicon-star" aria-hidden="true"></span></h5>
-    </div>
-
-    
-
-  </script>
-  <script type="text/html" id="template1">
-    <h1>Page 1: <%= greeting %></h1>
-    <p><%= moreText %></p>
-  </script>
-  <script type="text/html" id="template2">
-    <h1>Page 2: <%= heading %></h1>
-    <p>Lorem ipsum...</p>
-  </script>
+	<meta charset="utf-8">
+	<title>My Guy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/routers.js"></script>
+  
 </head>
 <body>
+	<script type="text/html" id="home">
+		<div class="banner">
+			<h1>MYGUY</h1>
+			<h5><span class="glyphicon glyphicon-star" aria-hidden="true"></span>FOOTBALL<span class="glyphicon glyphicon-star" aria-hidden="true"></span></h5>
+		</div>
+		<div class="title">CHOOSE A GAME</div>
+		<div></div>
+
+  	</script>
+	<script type="text/html" id="template1">
+	<h1>Page 1: <%= greeting %></h1>
+	<p><%= moreText %></p>
+	</script>
+	<script type="text/html" id="template2">
+	<h1>Page 2: <%= heading %></h1>
+	<p>Lorem ipsum...</p>
+	</script>
+	<!-- BEGIN: Underscore Template Definition. -->
+	<script type="text/template" class="template">
+	   <h2>
+	       <%= mg.listTitle %>
+	   </h2>
+	   <ul>
+	       <% _.each( mg.listItems, function( listItem ){ %>
+	           <li>
+	               <%- listItem.name %>
+	               <% if ( listItem.hasOlympicGold ){ %>
+	                   <em>*</em>
+	               <% } %>
+	           </li>
+	       <% }); %>
+	   </ul>
+
+	   <% var showFootnote = _.any(
+	       _.pluck( mg.listItems, "hasOlympicGold" )
+	   ); %>
+
+	   <% if ( showFootnote ){ %>
+	       <p style="font-size: 12px ;">
+	           <em>* Olympic gold medalist</em>
+	       </p>
+	   <% } %>
+	</script>
+	<!-- END: Underscore Template Definition. -->
+
+
 	<div class="row" style="margin: 0">
 		<div class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 " style="padding:0">
 		  <div id="view"></div>
 		  <div id="layout">
 			   	<ul>
-				    <li><a href="#/page1">Schedule</a></li>
-				    <li><a href="#">MyGame</a></li>
-				    <li><a href="#/page2">Plays</a></li>
-				    <li><a href="#/page2">Leader</a></li>
-				    <li><a href="#/page2">Help</a></li>
+				    <li><a href="#/page1"><span class="glyphicon glyphicon-list-alt"></span><p>Schedule</p></a></li>
+				    <li><a href="#"><span class="glyphicon">MG</span><p>MyGame</p></a></li>
+				    <li><a href="#/page2"><span class="glyphicon glyphicon-fullscreen"></span><p>Plays</p></a></li>
+				    <li><a href="#/page2"><span class="glyphicon glyphicon-user"></span><p>Leader</p></a></li>
+				    <li class="chewy"><a href="#/page2"><span class="glyphicon glyphicon-info-sign"></span><p>Help</p></a></li>
 	  			</ul>
   			</div>
 		</div>
