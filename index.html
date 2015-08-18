@@ -56,48 +56,40 @@
   	<!-- End Schedule Template -->
 
 	<script type="text/html" id="my-game">
-	<h1>My Game: 
+	<h1>My Game:</h1> 
 	</script>
 	<script type="text/html" id="plays">
-	<h1>Play: 
+	<h1>Play:<h1/> 
 	</script>
 	<script type="text/html" id="leaderboard">
-	<h1>LeaderBoard: 
+		<div class="leaderboard">
+			<ul class="nav nav-tabs" data-tabs="tabs">
+			    <li class="active"><a href="#weekly" data-toggle="tab">Weekly</a></li>
+			    <li><a href="#season" data-toggle="tab">Season</a></li>
+			</ul>
+			<div class="wrapper">
+				<div id="my-tab-content" class="tab-content">
+			    <div class="tab-pane active" id="weekly">
+			        <h1>Weekly</h1>
+			        <p>red red red red red red</p>
+			    </div>
+			    <div class="tab-pane" id="season">
+			        <h1>Season</h1>
+			        <p>orange orange orange orange orange</p>
+			    </div>
+			</div>
+			</div>
+			<div class="user-tile"></div>
+		</div>
 	</script>
 	<script type="text/html" id="help">
-	<h1>Help: 
+	<h1>Help: </h1>
 	</script>
 	
-	<!-- BEGIN: Underscore Template Definition. -->
-	<script type="text/template" class="template">
-	   <h2>
-	       <%= mg.listTitle %>
-	   </h2>
-	   <ul>
-	       <% _.each( mg.listItems, function( listItem ){ %>
-	           <li>
-	               <%- listItem.name %>
-	               <% if ( listItem.hasOlympicGold ){ %>
-	                   <em>*</em>
-	               <% } %>
-	           </li>
-	       <% }); %>
-	   </ul>
-
-	   <% var showFootnote = _.any(
-	       _.pluck( mg.listItems, "hasOlympicGold" )
-	   ); %>
-
-	   <% if ( showFootnote ){ %>
-	       <p style="font-size: 12px ;">
-	           <em>* Olympic gold medalist</em>
-	       </p>
-	   <% } %>
-	</script>
-	<!-- END: Underscore Template Definition. -->
 		<div class="container">
 		<div class="row" style="margin: 0">
 			<div class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 main-col" style="padding:0;  ">
+
 			  <div id="view" ></div>
 			  	<div id="layout" style="max-width:1000px; margin:0 auto">
 				   	<ul>
@@ -113,3 +105,16 @@
  		</div>
 </body>
 </html>
+
+<!--
+
+	<div class="leaderboard">
+					<div class="nav">
+						<div >Weekly</div>
+						<div >Season</div>
+					</div>
+					<div class="container"></div>
+					<div class="user-tile"></div>
+				</div>
+
+		-->

@@ -66,6 +66,7 @@ ul{
 	left:0;
 	right:0;
 	background-color: rgb(38,38,38);
+	height: 75px;
 }
 
 #layout a{
@@ -202,3 +203,63 @@ ul{
 	overflow-x:scroll
 }
 
+/*Leaderboard*/
+
+.leaderboard {
+	position:absolute; 
+	top:0; 
+	right:0; 
+	left:0; 
+	bottom:75px;
+}
+
+.leaderboard nav {
+	width: 100%; 
+	height: 50px;
+}
+
+.leaderboard .wrapper	 {
+	background-color: red; 
+	position:absolute;
+	left:0;
+	right:0;
+	top:50px;
+	bottom:0;
+}
+
+.leaderboard .user-tile{
+	background-color: green; 
+	position:absolute;
+	height: 50px;
+	bottom:0;
+	left:0;
+	right:0
+}
+
+.leaderboard .nav li {
+	width:50%; 
+	height:50px; 
+	text-align:center;
+	border: 1px solid red;
+	line-height: 50px;
+	background-color: #eee;
+	
+}
+
+.leaderboard .nav .active {
+	background-color: white;
+}
+
+.leaderboard .nav a {
+	color: black;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: none;
+	background-color: transparent;
+}
+
+.nav > li > a:hover {
+	background-color: transparent;	
+	border: none;
+}
