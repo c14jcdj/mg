@@ -1,3 +1,45 @@
+/*Colors*/
+
+.blue {
+	background-color: blue;
+}
+
+.orange {
+	background-color: #FB4F14;
+}
+
+.brown {
+	background-color: #22150C;
+}
+
+.black {
+	background-color: #000 ;
+}
+
+.teal {
+	background-color: #008E97;
+}
+
+.navy-blue {
+	background-color: #002244;
+}
+
+.red {
+	background-color: red;
+}
+
+.gold {
+	background-color: #9F8958;
+}
+
+.yellow {
+	background-color: #FFB612;
+}
+
+.baby-blue {
+	background-color: #0073CF;
+}
+
 /*Menu*/
 
 .container {
@@ -8,7 +50,6 @@
 	bottom:0;
 	top:0;
 	padding: 0;
-
 }
 
 ul{
@@ -109,12 +150,10 @@ ul{
 }
 
 .left-tile {
-	background-color: blue;
 	left: 0;
 }
 
 .right-tile{
-	background-color: orange;
 	right: 0;
 }
 
@@ -138,10 +177,11 @@ ul{
 	width: 32%;
 	display: inline-block;
 	vertical-align: middle;
+	border: 1px solid transparent;
 }
 
 .content p:nth-child(2){
-	font-size: 1.3em;
+	font-size: 1.2em;
 	margin-top: -5px;
 }
 
@@ -156,7 +196,7 @@ ul{
 .game-schedule {
 	position:absolute; 
 	top:170px;
-	bottom:75px;
+	bottom:76px;
 	left:0;
 	right:0; 
 	overflow-x:scroll

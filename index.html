@@ -16,99 +16,43 @@
   
 </head>
 <body>
+
+	<!-- Schedule Template -->
+
 	<script type="text/html" id="schedule">
 		<div class="banner">
 			<h1>MYGUY</h1>
 			<h5><span class="glyphicon glyphicon-star" aria-hidden="true"></span>FOOTBALL<span class="glyphicon glyphicon-star" aria-hidden="true"></span></h5>
 		</div>
 		<div class="title">CHOOSE A GAME</div>
-		<div class="game-schedule" style="position:absolute; top:170px;bottom:76px;left:0;right:0; overflow-x:scroll" >
+		<div class="game-schedule">
+			<% _.each( mg.schedule, function( game ){ %>
 			<div class="wrapper">
-				<div class="left-tile"></div>
+				<div class="left-tile <%= game.color %> "></div>
 				<div class="content">
-					<div class="time">Sun | 1PM | FOX </div>
+					<div class="time"><%= game.day %> | <%= game.time %> | <%= (game.network).toUpperCase() %> </div>
 					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
+						<p><%= game.teamCity %></p>
+						<p><%= (game.teamName).toUpperCase() %></p>
+						<p><%= game.record %></p>
 					</div>
 					<div>
-						<p>Starting 30 min before kickoff</p>
+						<p>Starting <%= game.beforeKickOff %> before kickoff</p>
 					</div>
 					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
+						<p><%= game.teamCity2 %></p>
+						<p><%= (game.teamName2).toUpperCase() %></p>
+						<p><%= game.record2 %></p>
 					</div>
 				</div>
-				<div class="right-tile"></div>
+				<div class="right-tile <%= game.color2 %>"></div>
 			</div>
-			<div class="wrapper">
-				<div class="left-tile"></div>
-				<div class="content">
-					<div class="time">Sun | 1PM | FOX </div>
-					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
-					</div>
-					<div>
-						<p>Starting 30 min before kickoff</p>
-					</div>
-					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
-					</div>
-				</div>
-				<div class="right-tile"></div>
-			</div>
-			<div class="wrapper">
-				<div class="left-tile"></div>
-				<div class="content">
-					<div class="time">Sun | 1PM | FOX </div>
-					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
-					</div>
-					<div>
-						<p>Starting 30 min before kickoff</p>
-					</div>
-					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
-					</div>
-				</div>
-				<div class="right-tile"></div>
-			</div>
-			<div class="wrapper">
-				<div class="left-tile"></div>
-				<div class="content">
-					<div class="time">Sun | 1PM | FOX </div>
-					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
-					</div>
-					<div>
-						<p>Starting 30 min before kickoff</p>
-					</div>
-					<div>
-						<p>New York</p>
-						<p>GIANTS</p>
-						<p>W1-L0</p>
-					</div>
-				</div>
-				<div class="right-tile"></div>
-			</div>
-			
-
-
+			<% }); %>
 		</div>
-
   	</script>
+
+  	<!-- End Schedule Template -->
+
 	<script type="text/html" id="my-game">
 	<h1>My Game: 
 	</script>

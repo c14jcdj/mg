@@ -8,7 +8,8 @@ var routerModule = (function(){
   }
 
   function tmpl(str){
-	  return document.getElementById(str).innerHTML
+    templateModule.setTemplateData(str);
+	  // return document.getElementById(str).innerHTML
 	};
 
   function router () {
@@ -20,7 +21,8 @@ var routerModule = (function(){
     el = el || document.getElementById('view');
        
     // Render route template 
-    el.innerHTML = tmpl(route.templateId);
+    // el.innerHTML = tmpl(route.templateId);
+    tmpl(route.templateId);
   }
 
   // Listen on hash change:
