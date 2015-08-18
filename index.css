@@ -230,7 +230,7 @@ ul{
 .leaderboard .user-tile{
 	background-color: green; 
 	position:absolute;
-	height: 50px;
+	height: 100px;
 	bottom:0;
 	left:0;
 	right:0
@@ -243,7 +243,8 @@ ul{
 	border: 1px solid red;
 	line-height: 50px;
 	background-color: #eee;
-	
+	float: left;
+	position: relative;
 }
 
 .leaderboard .nav .active {
@@ -252,14 +253,17 @@ ul{
 
 .leaderboard .nav a {
 	color: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	text-decoration: none;
 }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav > li > a:hover {
 	border: none;
 	background-color: transparent;
 }
 
-.nav > li > a:hover {
-	background-color: transparent;	
-	border: none;
-}
+ 
