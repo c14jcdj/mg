@@ -266,4 +266,11 @@ ul{
 	background-color: transparent;
 }
 
+.tab-content > .active {
+    display: block !important;
+}
+
+.tab-content > .tab-pane {
+    display: none ;
+}
  
