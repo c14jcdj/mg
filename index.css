@@ -84,4 +84,63 @@ ul{
 	text-align: center;
 }
 
+.wrapper{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+
+.left-tile, .right-tile {
+	width: 10px;
+	position: absolute;
+	top: 0;
+	bottom:0;
+}
+
+.left-tile {
+	background-color: blue;
+	left: 0;
+}
+
+.right-tile{
+	background-color: orange;
+	right: 0;
+}
+
+.content{
+	margin: 0 10px;
+	text-align: center;
+	padding-bottom:5px; 
+
+}
+
+.content .time{
+	width: 100%;
+	padding: 5px;
+}
+
+.content div:nth-child(3){
+	color: #ccc;
+}
+
+.content div:not(:first-child) {
+	width: 32%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.content p:nth-child(2){
+	font-size: 1.3em;
+	margin-top: -5px;
+}
+
+.content p:nth-child(3){
+	color: #ccc;
+}
+
+.content p {
+	margin: 0;
+}
+
+
 
