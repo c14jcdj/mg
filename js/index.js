@@ -1,6 +1,9 @@
 
 
 $(function(){
+		
+		templateModule.setViewHeight();
+
         // _.templateSettings.variable = "mg";
         // // Grab the HTML out of our template tag and pre-compile it.
         // var template = _.template(
