@@ -7,12 +7,14 @@ var templateModule = (function(){
 
 	function setTemplateData(str){
 		_.templateSettings.variable = "mg";
+
         // Grab the HTML out of our template tag and pre-compile it.
         var template = _.template(
             $( "script#"+str+"" ).html()
         );
+
         // Define our render data (to be put into the "rc" variable).
-        var templateData = {
+        var scheduleData = {
         	
             schedule: [
                 {
@@ -87,6 +89,16 @@ var templateModule = (function(){
                 }
             ]
         };
+
+        var templateData;
+        
+        switch(str){
+            case 'schedule':
+                templateData = scheduleData
+                break;
+            default: 
+                {};
+        }
         // Render the underscore template and inject it after the H1
         // in our current DOM.
         $( "#view" ).html(

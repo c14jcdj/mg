@@ -104,96 +104,96 @@ ul{
 
 /*Schedule*/
 
-.banner {
+.schedule .banner {
 	background-color: rgb(38,38,38);
 	text-align: center;
 	padding:5px 0;
 }
 
-.banner h1, .banner h5{
+.schedule .banner h1, .schedule .banner h5{
 	font-size: 2em;
 	color: white;
 	font-family: 'Alfa Slab One', cursive;
 }
 
-.banner h1 {
+.schedule .banner h1 {
 	margin-top: 10px;
 	margin-bottom: 0;
 	font-size:4em;
 }
 
-.banner h5 {
+.schedule .banner h5 {
 	margin-top: -5px;
 }
 
-.glyphicon-star {
+.schedule .glyphicon-star {
 	padding: 10px;
 }
 
-.title {
+.schedule .title {
 	padding: 10px 0;
 	background-color: #eee;
 	text-align: center;
 }
 
-.wrapper{
+.schedule .wrapper{
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	position: relative;
 }
 
-.left-tile, .right-tile {
+.schedule .left-tile, .schedule .right-tile {
 	width: 10px;
 	position: absolute;
 	top: 0;
 	bottom:0;
 }
 
-.left-tile {
+.schedule .left-tile {
 	left: 0;
 }
 
-.right-tile{
+.schedule .right-tile{
 	right: 0;
 }
 
-.content{
+.schedule .content{
 	margin: 0 10px;
 	text-align: center;
 	padding-bottom:5px; 
 
 }
 
-.content .time{
+.schedule .content .time{
 	width: 100%;
 	padding-top: 10px;
 }
 
-.content div:nth-child(3){
+.schedule .content div:nth-child(3){
 	color: #ccc;
 }
 
-.content div:not(:first-child) {
+.schedule .content div:not(:first-child) {
 	width: 32%;
 	display: inline-block;
 	vertical-align: middle;
 	border: 1px solid transparent;
 }
 
-.content p:nth-child(2){
+.schedule .content p:nth-child(2){
 	font-size: 1.2em;
 	margin-top: -5px;
 }
 
-.content p:nth-child(3){
+.schedule .content p:nth-child(3){
 	color: #ccc;
 }
 
-.content p {
+.schedule .content p {
 	margin: 0;
 }
 
-.game-schedule {
+.schedule .game-schedule {
 	position:absolute; 
 	top:170px;
 	bottom:76px;

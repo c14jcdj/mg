@@ -20,34 +20,36 @@
 	<!-- Schedule Template -->
 
 	<script type="text/html" id="schedule">
-		<div class="banner">
-			<h1>MYGUY</h1>
-			<h5><span class="glyphicon glyphicon-star" aria-hidden="true"></span>FOOTBALL<span class="glyphicon glyphicon-star" aria-hidden="true"></span></h5>
-		</div>
-		<div class="title">CHOOSE A GAME</div>
-		<div class="game-schedule">
-			<% _.each( mg.schedule, function( game ){ %>
-			<div class="wrapper">
-				<div class="left-tile <%= game.color %> "></div>
-				<div class="content">
-					<div class="time"><%= game.day %> | <%= game.time %> | <%= (game.network).toUpperCase() %> </div>
-					<div>
-						<p><%= game.teamCity %></p>
-						<p><%= (game.teamName).toUpperCase() %></p>
-						<p><%= game.record %></p>
-					</div>
-					<div>
-						<p>Starting <%= game.beforeKickOff %> before kickoff</p>
-					</div>
-					<div>
-						<p><%= game.teamCity2 %></p>
-						<p><%= (game.teamName2).toUpperCase() %></p>
-						<p><%= game.record2 %></p>
-					</div>
-				</div>
-				<div class="right-tile <%= game.color2 %>"></div>
+		<div class="schedule">
+			<div class="banner">
+				<h1>MYGUY</h1>
+				<h5><span class="glyphicon glyphicon-star" aria-hidden="true"></span>FOOTBALL<span class="glyphicon glyphicon-star" aria-hidden="true"></span></h5>
 			</div>
-			<% }); %>
+			<div class="title">CHOOSE A GAME</div>
+			<div class="game-schedule">
+				<% _.each( mg.schedule, function( game ){ %>
+					<div class="wrapper">
+						<div class="left-tile <%= game.color %> "></div>
+						<div class="content">
+							<div class="time"><%= game.day %> | <%= game.time %> | <%= (game.network).toUpperCase() %> </div>
+							<div>
+								<p><%= game.teamCity %></p>
+								<p><%= (game.teamName).toUpperCase() %></p>
+								<p><%= game.record %></p>
+							</div>
+							<div>
+								<p>Starting <%= game.beforeKickOff %> before kickoff</p>
+							</div>
+							<div>
+								<p><%= game.teamCity2 %></p>
+								<p><%= (game.teamName2).toUpperCase() %></p>
+								<p><%= game.record2 %></p>
+							</div>
+						</div>
+						<div class="right-tile <%= game.color2 %>"></div>
+					</div>
+				<% }); %>
+			</div>
 		</div>
   	</script>
 
