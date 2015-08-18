@@ -1,5 +1,10 @@
 /*Menu*/
 
+.container {
+	max-width: 1000px;
+	border: 1px solid blue;
+}
+
 ul{
 	border: 1px solid black;
 	overflow: hidden;
@@ -116,7 +121,7 @@ ul{
 
 .content .time{
 	width: 100%;
-	padding: 5px;
+	padding-top: 10px;
 }
 
 .content div:nth-child(3){
