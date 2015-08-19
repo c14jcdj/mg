@@ -391,5 +391,32 @@ ul{
 	overflow-x: scroll;
 }
 
+/*My Game*/
 
+.my-game .banner {
+	height: 100px;
+}
 
+.my-game .banner .score, .my-game .banner .time {
+	width: 30%;
+	background-color: rgb(37,37,37);
+	float: left;
+	height: 100px;
+}
+
+.my-game .banner .time {
+	width: 40%;
+	background-color: #eee;
+}
+
+.my-game .banner .time .ad {
+	height: 40px;
+	text-align: center;
+	color: #ccc;
+	line-height: 40px;
+}
+
+.my-game .banner .time .clock {
+	background-color: grey;
+	height: 60px;
+}
