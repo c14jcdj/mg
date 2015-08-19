@@ -8,6 +8,7 @@ var routerModule = (function(){
   }
 
   function tmpl(str){
+    console.log(str)
     templateModule.setTemplateData(str);
 	  // return document.getElementById(str).innerHTML
 	};

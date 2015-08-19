@@ -43,6 +43,14 @@
 .color-green {
 	color: #00B700;
 }
+
+.color-red {
+	color: red;
+}
+
+.color-orange {
+	color: orange;
+}
 /*Override Bootstrap*/
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav > li > a:hover {
@@ -351,13 +359,18 @@ ul{
 
 .plays .header {
 	background-color: #eee;
-	height: 50px;
+	height: 45px;
+	font-size: 1.1em;
 }
 
 .plays .header span, .plays .content span {
 	float: left;
 	line-height:50px;
-	padding: 0 15px;
+	padding: 0 10px;
+}
+
+.plays .header span{
+	line-height: 45px;
 }
 
 .plays .header span:nth-child(3), .plays .content span:nth-child(3) {
@@ -368,5 +381,15 @@ ul{
 	overflow: hidden;
 	border: 1px solid #eee;
 }
+
+.plays .wrapper {
+	position: absolute;
+	top: 45px;
+	left:0;
+	right:0;
+	bottom: 75px;
+	overflow-x: scroll;
+}
+
 
 

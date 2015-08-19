@@ -187,10 +187,79 @@ var templateModule = (function(){
                             points: '500'   
                     }
                 }
+            };
 
+        var playData = {
+                plays: [
+                    {
+                        time: '15:00',
+                        play: '65y punt(#4 A. Lee, CLE)',
+                        points: '+17',
+                        color: 'black'
+                    },
+                    {
+                        time: '14:51',
+                        play: 'Penalty',
+                        points: '0',
+                        color: 'red'
+                    },
+                    {
+                        time: '14:38',
+                        play: '7y run(#10 E. Mannning, NYG)',
+                        points: '+14',
+                        color: 'green'
+                    },
+                    {
+                        time: '14:38',
+                        play: 'Tackle (CLE Defense)',
+                        points: '+5',
+                        color: 'black'
+                    },
+                    {
+                        time: '14:20',
+                        play: '12y run(#10 E. Manning, NYG)',
+                        points: '+15',
+                        color: 'green'
+                    },
+                    {
+                        time: '14:18',
+                        play: 'Tackle(#23 D. Rodgers, CLE)',
+                        points: '+13',
+                        color: 'green'
+                    },
+                    {
+                        time: '14:01',
+                        play: '25y pass(#10 E. Manning, NYG)',
+                        points: '+25',
+                        color: 'orange'
+                    },
+                    {
+                        time: '14:38',
+                        play: 'Tackle (CLE Defense)',
+                        points: '+5',
+                        color: 'black'
+                    },
+                    {
+                        time: '14:20',
+                        play: '12y run(#10 E. Manning, NYG)',
+                        points: '+15',
+                        color: 'green'
+                    },
+                    {
+                        time: '14:18',
+                        play: 'Tackle(#23 D. Rodgers, CLE)',
+                        points: '+13',
+                        color: 'green'
+                    },
+                    {
+                        time: '14:01',
+                        play: '25y pass(#10 E. Manning, NYG)',
+                        points: '+25',
+                        color: 'orange'
+                    }
 
-                
-            
+                    
+                ]
             };
         var templateData;
 
@@ -200,7 +269,12 @@ var templateModule = (function(){
                 break;
             case 'leaderboard':
                 templateData = leaderboardData;
-                var renderSub = _.template( $('#sub-leaderboard').remove().text() );
+                var renderSub = _.template( $('#sub-leaderboard').text() );
+                templateData.renderSub = renderSub;
+                break;
+            case 'plays':
+                templateData = playData;
+                var renderSub = _.template( $('#sub-plays').text() );
                 templateData.renderSub = renderSub;
                 break;
             default: 

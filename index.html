@@ -54,9 +54,19 @@
 
   	<!-- End Schedule Template -->
 
+  	
+
 	<script type="text/html" id="my-game">
 	<h1>My Game:</h1> 
 	</script>
+
+	<script type="text/html" id="sub-plays">
+  		<div class="content color-<%= mg.color %>">
+			<span><%= mg.time %></span>
+			<span><%= mg.play %></span>
+			<span><%= mg.points %></span>
+		</div>
+  	</script>
 	<script type="text/html" id="plays">
 		<div class="plays">
 			<div class="header">
@@ -64,25 +74,10 @@
 				<span>PLAY</span>
 				<span>POINTS</span>
 			</div>
-			<div class="content">
-				<span>15:00</span>
-				<span>65y punt(#4 A. Lee, CLE)</span>
-				<span>+17</span>
-			</div>
-			<div class="content color-green">
-				<span>15:00</span>
-				<span>65y punt(#4 A. Lee, CLE)</span>
-				<span>+17</span>
-			</div>
-			<div class="content">
-				<span>15:00</span>
-				<span>65y punt(#4 A. Lee, CLE)</span>
-				<span>+17</span>
-			</div>
-			<div class="content">
-				<span>15:00</span>
-				<span>65y punt(#4 A. Lee, CLE)</span>
-				<span>+17</span>
+			<div class="wrapper">
+				<% _.each( mg.plays, function( play ){ %>
+					<%= mg.renderSub(play) %>
+				<% }); %>
 			</div>
 		</div>
 		
