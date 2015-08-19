@@ -90,11 +90,61 @@ var templateModule = (function(){
             ]
         };
 
+        var leaderboardData = {
+                leaderboard: [
+                    {
+                        rank: '1',
+                        name: 'James',
+                        city: 'Ontario',
+                        points: '10000'
+                    },
+                    {
+                        rank: '2',
+                        name: 'Luke',
+                        city: 'Orange County',
+                        points: '1000'
+                    },
+                    {
+                        rank: '3',
+                        name: 'Brian',
+                        city: 'San Francisco',
+                        points: '900'
+                    },
+                    {
+                        rank: '4',
+                        name: 'Collin',
+                        city: 'Tallahassee',
+                        points: '800'
+                    },
+                    {
+                        rank: '5',
+                        name: 'Julie',
+                        city: 'Alabama',
+                        points: '700'
+                    },
+                    {
+                        rank: '6',
+                        name: 'Jerry',
+                        city: 'Sacramento',
+                        points: '600'
+                    },
+                    {
+                        rank: '7',
+                        name: 'Wes',
+                        city: 'Concord',
+                        points: '500'
+                    }
+                ]
+            
+            };
         var templateData;
-        
+
         switch(str){
             case 'schedule':
                 templateData = scheduleData
+                break;
+            case 'leaderboard':
+                templateData = leaderboardData
                 break;
             default: 
                 {};

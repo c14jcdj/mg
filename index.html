@@ -69,110 +69,21 @@
 				<div class="wrapper" >
 					<div id="my-tab-content" class="tab-content">
 				    	<div class=" tab-pane active" id="weekly">
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">1</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0;">Johhny Mack</p>
-					    				<p style="margin:0">Seattle</p>
-					    			</div>
+				    		<% _.each( mg.leaderboard, function( leaderboard ){ %>
+					    		<div class="content" >
+						    		<div class="player-info">
+						    			<div class="rank"><%= leaderboard.rank %></div>
+						    			<div class="avatar"></div>
+						    			<div class="name">
+						    				<p style="margin:0;"><%= leaderboard.name %></p>
+						    				<p style="margin:0"><%= leaderboard.city %></p>
+						    			</div>
+						    		</div>
+						    		<div class="point-container">
+						    			<div class="points"><%= leaderboard.points %></div>
+						    		</div>
 					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">10000</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">2</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Chewy Dewy</p>
-					    				<p style="margin:0">Cali</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">1000</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">3</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Cher Bear</p>
-					    				<p style="margin:0">Oc</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">100</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">3</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Cher Bear</p>
-					    				<p style="margin:0">Oc</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">100</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">3</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Cher Bear</p>
-					    				<p style="margin:0">Oc</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">100</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">3</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Cher Bear</p>
-					    				<p style="margin:0">Oc</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">100</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">3</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Cher Bear</p>
-					    				<p style="margin:0">Oc</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">100</div>
-					    		</div>
-				    		</div>
-				    		<div class="content" >
-					    		<div class="player-info">
-					    			<div class="rank">3</div>
-					    			<div class="avatar"></div>
-					    			<div class="name">
-					    				<p style="margin:0; ">Cher Bear</p>
-					    				<p style="margin:0">Oc</p>
-					    			</div>
-					    		</div>
-					    		<div class="point-container">
-					    			<div class="points">100</div>
-					    		</div>
-				    		</div>
+				    		<% }); %>
 				    	</div>
 					    <div class="tab-pane" id="season">
 					        <h1>Season</h1>
