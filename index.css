@@ -40,6 +40,11 @@
 	background-color: #0073CF;
 }
 
+.color-green {
+	color: #00B700;
+}
+/*Override Bootstrap*/
+
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav > li > a:hover {
 	border: none;
 	background-color: transparent;
@@ -341,3 +346,27 @@ ul{
 	line-height:75px; 
 	font-size: 1.5em;  
 }
+
+/*Plays*/
+
+.plays .header {
+	background-color: #eee;
+	height: 50px;
+}
+
+.plays .header span, .plays .content span {
+	float: left;
+	line-height:50px;
+	padding: 0 15px;
+}
+
+.plays .header span:nth-child(3), .plays .content span:nth-child(3) {
+	float: right;
+}
+
+.plays .content  {
+	overflow: hidden;
+	border: 1px solid #eee;
+}
+
+

@@ -58,26 +58,53 @@
 	<h1>My Game:</h1> 
 	</script>
 	<script type="text/html" id="plays">
-	<h1>Play:<h1/> 
+		<div class="plays">
+			<div class="header">
+				<span>TIME</span>
+				<span>PLAY</span>
+				<span>POINTS</span>
+			</div>
+			<div class="content">
+				<span>15:00</span>
+				<span>65y punt(#4 A. Lee, CLE)</span>
+				<span>+17</span>
+			</div>
+			<div class="content color-green">
+				<span>15:00</span>
+				<span>65y punt(#4 A. Lee, CLE)</span>
+				<span>+17</span>
+			</div>
+			<div class="content">
+				<span>15:00</span>
+				<span>65y punt(#4 A. Lee, CLE)</span>
+				<span>+17</span>
+			</div>
+			<div class="content">
+				<span>15:00</span>
+				<span>65y punt(#4 A. Lee, CLE)</span>
+				<span>+17</span>
+			</div>
+		</div>
+		
 	</script>
 
 	<!-- LeaderBoard Templates -->
 
 		<!-- LeaderBoard Sub Template -->
 	<script type="text/html" id="sub-leaderboard">
-		    		<div class="content" >
-			    		<div class="player-info">
-			    			<div class="rank"><%= mg.rank %></div>
-			    			<div class="avatar"></div>
-			    			<div class="name">
-			    				<p style="margin:0;"><%= mg.name %></p>
-			    				<p style="margin:0"><%= mg.city %></p>
-			    			</div>
-			    		</div>
-			    		<div class="point-container">
-			    			<div class="points"><%= mg.points %></div>
-			    		</div>
-		    		</div>
+		<div class="content" >
+    		<div class="player-info">
+    			<div class="rank"><%= mg.rank %></div>
+    			<div class="avatar"></div>
+    			<div class="name">
+    				<p style="margin:0;"><%= mg.name %></p>
+    				<p style="margin:0"><%= mg.city %></p>
+    			</div>
+    		</div>
+    		<div class="point-container">
+    			<div class="points"><%= mg.points %></div>
+    		</div>
+		</div>
 	</script>
 		<!-- End Leaderboard Sub Template -->
 
@@ -108,7 +135,7 @@
 			</div>
 	</script>
 		<!-- End Leaderboard Main Template -->
-	<!-- End Leaderboard Sub Template -->
+	<!-- End Leaderboard Templates -->
 
 	<script type="text/html" id="help">
 	<h1>Help: </h1>
