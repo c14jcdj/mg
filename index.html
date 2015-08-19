@@ -60,98 +60,106 @@
 	<h1>My Game:</h1> 
 	</script>
 
-	<script type="text/html" id="sub-plays">
-  		<div class="content color-<%= mg.color %>">
-			<span><%= mg.time %></span>
-			<span><%= mg.play %></span>
-			<span><%= mg.points %></span>
-		</div>
-  	</script>
-	<script type="text/html" id="plays">
-		<div class="plays">
-			<div class="header">
-				<span>TIME</span>
-				<span>PLAY</span>
-				<span>POINTS</span>
+	<!-- Plays Templates -->
+		<!-- Plays Sub Template -->
+		<script type="text/html" id="sub-plays">
+	  		<div class="content color-<%= mg.color %>">
+				<span><%= mg.time %></span>
+				<span><%= mg.play %></span>
+				<span><%= mg.points %></span>
 			</div>
-			<div class="wrapper">
-				<% _.each( mg.plays, function( play ){ %>
-					<%= mg.renderSub(play) %>
-				<% }); %>
+	  	</script>
+  		<!-- End Plays Sub Template -->
+
+  		<!-- Plays Main Template -->
+		<script type="text/html" id="plays">
+			<div class="plays">
+				<div class="header">
+					<span>TIME</span>
+					<span>PLAY</span>
+					<span>POINTS</span>
+				</div>
+				<div class="wrapper">
+					<% _.each( mg.plays, function( play ){ %>
+						<%= mg.renderSub(play) %>
+					<% }); %>
+				</div>
 			</div>
-		</div>
-		
-	</script>
+		</script>
+		<!-- End Plays Main Template -->
+	<!-- End Plays Template -->
+
 
 	<!-- LeaderBoard Templates -->
 
 		<!-- LeaderBoard Sub Template -->
-	<script type="text/html" id="sub-leaderboard">
-		<div class="content" >
-    		<div class="player-info">
-    			<div class="rank"><%= mg.rank %></div>
-    			<div class="avatar"></div>
-    			<div class="name">
-    				<p style="margin:0;"><%= mg.name %></p>
-    				<p style="margin:0"><%= mg.city %></p>
-    			</div>
-    		</div>
-    		<div class="point-container">
-    			<div class="points"><%= mg.points %></div>
-    		</div>
-		</div>
-	</script>
+		<script type="text/html" id="sub-leaderboard">
+			<div class="content" >
+	    		<div class="player-info">
+	    			<div class="rank"><%= mg.rank %></div>
+	    			<div class="avatar"></div>
+	    			<div class="name">
+	    				<p style="margin:0;"><%= mg.name %></p>
+	    				<p style="margin:0"><%= mg.city %></p>
+	    			</div>
+	    		</div>
+	    		<div class="point-container">
+	    			<div class="points"><%= mg.points %></div>
+	    		</div>
+			</div>
+		</script>
 		<!-- End Leaderboard Sub Template -->
 
 		<!-- Leaderboard Main Template -->
-	<script type="text/html" id="leaderboard">
-			<div class="leaderboard">
-				<ul class="nav nav-tabs" data-tabs="tabs">
-				    <li class="active"><a href="#weekly" data-toggle="tab">Weekly</a></li>
-				    <li><a href="#season" data-toggle="tab">Season</a></li>
-				</ul>
-				<div class="wrapper" >
-					<div id="my-tab-content" class="tab-content">
-				    	<div class=" tab-pane active" id="weekly">
-				    		<% _.each( mg.leaderboard.weekly, function( leaderboard ){ %>
-					    		<%= mg.renderSub(leaderboard) %>
-				    		<% }); %>
-				    	</div>
-					    <div class="tab-pane" id="season">
-					        <% _.each( mg.leaderboard.season, function( leaderboard ){ %>
-					    		<%= mg.renderSub(leaderboard) %>
-				    		<% }); %>
-					    </div>
+		<script type="text/html" id="leaderboard">
+				<div class="leaderboard">
+					<ul class="nav nav-tabs" data-tabs="tabs">
+					    <li class="active"><a href="#weekly" data-toggle="tab">Weekly</a></li>
+					    <li><a href="#season" data-toggle="tab">Season</a></li>
+					</ul>
+					<div class="wrapper" >
+						<div id="my-tab-content" class="tab-content">
+					    	<div class=" tab-pane active" id="weekly">
+					    		<% _.each( mg.leaderboard.weekly, function( leaderboard ){ %>
+						    		<%= mg.renderSub(leaderboard) %>
+					    		<% }); %>
+					    	</div>
+						    <div class="tab-pane" id="season">
+						        <% _.each( mg.leaderboard.season, function( leaderboard ){ %>
+						    		<%= mg.renderSub(leaderboard) %>
+					    		<% }); %>
+						    </div>
+						</div>
+					</div>
+					<div class="user-tile">
+						<%= mg.renderSub(mg.leaderboard.user) %>
 					</div>
 				</div>
-				<div class="user-tile">
-					<%= mg.renderSub(mg.leaderboard.user) %>
-				</div>
-			</div>
-	</script>
+		</script>
 		<!-- End Leaderboard Main Template -->
 	<!-- End Leaderboard Templates -->
 
 	<script type="text/html" id="help">
 	<h1>Help: </h1>
 	</script>
-		<div class="container">
-			<div class="row" style="margin: 0">
-				<div class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 main-col" style="padding:0;  ">
+	
+	<div class="container">
+		<div class="row" style="margin: 0">
+			<div class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 main-col" style="padding:0;  ">
 
-				  <div id="view" ></div>
-				  	<div id="layout" style="max-width:1000px; margin:0 auto">
-					   	<ul>
-						    <a href="#"><li><span class="glyphicon glyphicon-list-alt"></span><p>Schedule</p></li></a>
-						    <a href="#/my-game"><li><span class="glyphicon">MG</span><p>MyGame</p></li></a>
-						    <a href="#/plays"><li><span class="glyphicon glyphicon-fullscreen"></span><p>Plays</p></li></a>
-						    <a href="#/leaderboard"><li><span class="glyphicon glyphicon-user"></span><p>Leader</p></li></a>
-						    <a href="#/help"><li class="chewy"><span class="glyphicon glyphicon-info-sign"></span><p>Help</p></li></a>
-			  			</ul>
-		  			</div>
-				</div>
- 			</div>
- 		</div>
+			  <div id="view" ></div>
+			  	<div id="layout" style="max-width:1000px; margin:0 auto">
+				   	<ul>
+					    <a href="#"><li><span class="glyphicon glyphicon-list-alt"></span><p>Schedule</p></li></a>
+					    <a href="#/my-game"><li><span class="glyphicon">MG</span><p>MyGame</p></li></a>
+					    <a href="#/plays"><li><span class="glyphicon glyphicon-fullscreen"></span><p>Plays</p></li></a>
+					    <a href="#/leaderboard"><li><span class="glyphicon glyphicon-user"></span><p>Leader</p></li></a>
+					    <a href="#/help"><li class="chewy"><span class="glyphicon glyphicon-info-sign"></span><p>Help</p></li></a>
+		  			</ul>
+	  			</div>
+			</div>
+			</div>
+		</div>
 </body>
 </html>
 
