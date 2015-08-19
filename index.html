@@ -60,6 +60,21 @@
 	<script type="text/html" id="plays">
 	<h1>Play:<h1/> 
 	</script>
+	<script type="text/html" id="sub-leaderboard">
+		    		<div class="content" >
+			    		<div class="player-info">
+			    			<div class="rank"><%= mg.rank %></div>
+			    			<div class="avatar"></div>
+			    			<div class="name">
+			    				<p style="margin:0;"><%= mg.name %></p>
+			    				<p style="margin:0"><%= mg.city %></p>
+			    			</div>
+			    		</div>
+			    		<div class="point-container">
+			    			<div class="points"><%= mg.points %></div>
+			    		</div>
+		    		</div>
+	</script>
 	<script type="text/html" id="leaderboard">
 			<div class="leaderboard">
 				<ul class="nav nav-tabs" data-tabs="tabs">
@@ -69,42 +84,19 @@
 				<div class="wrapper" >
 					<div id="my-tab-content" class="tab-content">
 				    	<div class=" tab-pane active" id="weekly">
-				    		<% _.each( mg.leaderboard, function( leaderboard ){ %>
-					    		<div class="content" >
-						    		<div class="player-info">
-						    			<div class="rank"><%= leaderboard.rank %></div>
-						    			<div class="avatar"></div>
-						    			<div class="name">
-						    				<p style="margin:0;"><%= leaderboard.name %></p>
-						    				<p style="margin:0"><%= leaderboard.city %></p>
-						    			</div>
-						    		</div>
-						    		<div class="point-container">
-						    			<div class="points"><%= leaderboard.points %></div>
-						    		</div>
-					    		</div>
+				    		<% _.each( mg.leaderboard.weekly, function( leaderboard ){ %>
+					    		<%= mg.renderSub(leaderboard) %>
 				    		<% }); %>
 				    	</div>
 					    <div class="tab-pane" id="season">
-					        <h1>Season</h1>
-					        <p>orange orange orange orange orange</p>
+					        <% _.each( mg.leaderboard.season, function( leaderboard ){ %>
+					    		<%= mg.renderSub(leaderboard) %>
+				    		<% }); %>
 					    </div>
 					</div>
 				</div>
 				<div class="user-tile">
-					<div class="content" >
-			    		<div class="player-info">
-			    			<div class="rank">44</div>
-			    			<div class="avatar"></div>
-			    			<div class="name">
-			    				<p style="margin:0;">Me Amor</p>
-			    				<p style="margin:0">Hawaii</p>
-			    			</div>
-			    		</div>
-			    		<div class="point-container">
-			    			<div class="points">10</div>
-			    		</div>
-		    		</div>
+					<%= mg.renderSub(mg.leaderboard.user) %>
 				</div>
 			</div>
 		    

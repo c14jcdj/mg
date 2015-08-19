@@ -91,50 +91,105 @@ var templateModule = (function(){
         };
 
         var leaderboardData = {
-                leaderboard: [
-                    {
-                        rank: '1',
-                        name: 'James',
-                        city: 'Ontario',
-                        points: '10000'
-                    },
-                    {
-                        rank: '2',
-                        name: 'Luke',
-                        city: 'Orange County',
-                        points: '1000'
-                    },
-                    {
-                        rank: '3',
-                        name: 'Brian',
-                        city: 'San Francisco',
-                        points: '900'
-                    },
-                    {
-                        rank: '4',
-                        name: 'Collin',
-                        city: 'Tallahassee',
-                        points: '800'
-                    },
-                    {
-                        rank: '5',
-                        name: 'Julie',
-                        city: 'Alabama',
-                        points: '700'
-                    },
-                    {
-                        rank: '6',
-                        name: 'Jerry',
-                        city: 'Sacramento',
-                        points: '600'
-                    },
-                    {
+                leaderboard: {
+                    weekly: [
+                        {
+                            rank: '1',
+                            name: 'James',
+                            city: 'Ontario',
+                            points: '10000'
+                        },
+                        {
+                            rank: '2',
+                            name: 'Luke',
+                            city: 'Orange County',
+                            points: '1000'
+                        },
+                        {
+                            rank: '3',
+                            name: 'Brian',
+                            city: 'San Francisco',
+                            points: '900'
+                        },
+                        {
+                            rank: '4',
+                            name: 'Collin',
+                            city: 'Tallahassee',
+                            points: '800'
+                        },
+                        {
+                            rank: '5',
+                            name: 'Julie',
+                            city: 'Alabama',
+                            points: '700'
+                        },
+                        {
+                            rank: '6',
+                            name: 'Jerry',
+                            city: 'Sacramento',
+                            points: '600'
+                        },
+                        {
+                            rank: '7',
+                            name: 'Wes',
+                            city: 'Concord',
+                            points: '500'
+                        }
+                    ],
+                    season :[
+                        {
+                            rank: '1',
+                            name: 'Tiffany',
+                            city: 'Los Angeles',
+                            points: '10000'
+                        },
+                        {
+                            rank: '2',
+                            name: 'Taylor',
+                            city: 'Tennessee',
+                            points: '1000'
+                        },
+                        {
+                            rank: '3',
+                            name: 'Justin',
+                            city: 'San Diego',
+                            points: '900'
+                        },
+                        {
+                            rank: '4',
+                            name: 'Tommy',
+                            city: 'Roseville',
+                            points: '800'
+                        },
+                        {
+                            rank: '5',
+                            name: 'Janelle',
+                            city: 'Oklahoma',
+                            points: '700'
+                        },
+                        {
+                            rank: '6',
+                            name: 'Johnny',
+                            city: 'Monterey',
+                            points: '600'
+                        },
+                        {
+                            rank: '7',
+                            name: 'Jorge',
+                            city: 'Antioch',
+                            points: '500'
+                        }
+                    ],
+                    user:{
                         rank: '7',
-                        name: 'Wes',
-                        city: 'Concord',
-                        points: '500'
+                            name: 'Jorge',
+                            city: 'Antioch',
+                            points: '500'   
                     }
-                ]
+                }
+
+
+                
             
             };
         var templateData;
@@ -144,7 +199,9 @@ var templateModule = (function(){
                 templateData = scheduleData
                 break;
             case 'leaderboard':
-                templateData = leaderboardData
+                templateData = leaderboardData;
+                var renderSub = _.template( $('#sub-leaderboard').remove().text() );
+                templateData.renderSub = renderSub;
                 break;
             default: 
                 {};
