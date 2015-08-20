@@ -226,7 +226,7 @@ ul{
 	bottom:76px;
 	left:0;
 	right:0; 
-	overflow-x:scroll
+	overflow-y:scroll
 }
 
 /*Leaderboard*/
@@ -251,7 +251,7 @@ ul{
 	right:0;
 	top:50px;
 	bottom:75px;
-	overflow-x: scroll; 
+	overflow-y: scroll; 
 }
 
 .leaderboard .user-tile{
@@ -388,7 +388,7 @@ ul{
 	left:0;
 	right:0;
 	bottom: 75px;
-	overflow-x: scroll;
+	overflow-y: scroll;
 }
 
 /*My Game*/
@@ -546,4 +546,14 @@ ul{
 	text-align: center;
 	color: white;
 	font-size: 2em;
+}
+
+.my-game .content-wrapper {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right:	0;
+	bottom: 75px;
+	top:90px;
+	overflow-y: scroll; 
 }
