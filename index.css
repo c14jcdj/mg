@@ -460,3 +460,90 @@ ul{
 	border: 1px solid white;
 	padding: 1px 8px;
 }
+
+.my-game .points-container {
+	width: 80%;
+	background-color: rgb(138,138,138);
+	height: 185px;
+	margin: 10px auto;
+	position: relative;
+	border-radius: 5px; 
+	margin-bottom: 20px;
+}
+
+.my-game .points-container .streak-container{
+	width: 92%;
+	position: relative;
+	height: 22px;
+	background-color: #ddd;
+	top:8px;
+	left: 50%;
+	transform:translateX(-50%);
+	text-align: center;
+	border-radius: 5px;
+}
+
+.my-game .streak-container div {
+	background-color: rgb(138,138,138);
+	display: inline-block;
+	width: 28%;
+	height: 12px;
+	vertical-align: middle;
+	margin: 0 2px;
+	border-radius: 5px;
+}
+
+.my-game .points-container .points{
+	font-family: 'Alfa Slab One', cursive;
+	text-align: center;
+	position: relative;
+	top:22px;
+	font-size: 4em;
+	color: white;
+}
+
+.my-game .points-container .points-quarter-container{
+	height: 50px;
+	width: 90%;
+	background-color: #ddd;
+	border-radius: 5px; 
+	position: relative;
+	top:22px;
+	margin: 0 auto;
+}
+
+.points-quarter-container .title{
+	color: white;
+	text-align: center;
+	font-size: .8em;
+	height: 15px;
+	padding: 2px;
+}
+
+.points-quarter {
+	margin-top: 5px;
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	border: 1px solid white;
+	border-bottom: none;
+	border-left: none;
+	height: 29px;
+	line-height: 29px;
+	color: grey;
+}
+
+.points-quarter-container div:last-child {
+	border-right: none; 
+}
+
+.my-game .button {
+	height: 80px;
+	width:95%;
+	background-color: grey;
+	margin: 10px auto;
+	line-height: 80px;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+}
