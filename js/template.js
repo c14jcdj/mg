@@ -261,6 +261,16 @@ var templateModule = (function(){
                     
                 ]
             };
+        var myGameData = {
+            team: "MIA",
+            score: 0,
+            team2: "NYG",
+            score2: 1,
+            quarter: "2nd",
+            time: "1:00",
+            points: 0
+
+        };
         var templateData;
 
         switch(str){
@@ -276,6 +286,9 @@ var templateModule = (function(){
                 templateData = playData;
                 var renderSub = _.template( $('#sub-plays').text() );
                 templateData.renderSub = renderSub;
+                break;
+            case 'my-game':
+                templateData = myGameData;
                 break;
             default: 
                 {};
